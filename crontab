@@ -1,0 +1,1 @@
+* * * * * /bin/sh -c "/usr/bin/docker exec linx /bin/ash -c 'linx-cleanup -filespath /data/files -metapath /data/meta'" >/dev/null 2>&1
