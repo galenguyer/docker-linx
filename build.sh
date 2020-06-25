@@ -14,7 +14,7 @@ basedir="$(pwd)"
 docker build -t docker.seedno.de/seednode/linx:latest "$basedir"/.
 
 # log in to docker registry
-pass show docker-credential-helpers/docker-pass-initialized-check && docker login docker.seedno.de
+#pass show docker-credential-helpers/docker-pass-initialized-check && docker login docker.seedno.de
 
 # push the image to registry
-docker push docker.seedno.de/seednode/linx:latest
+#docker push docker.seedno.de/seednode/linx:latest
