@@ -24,5 +24,8 @@ RUN mkdir -p /data/files && mkdir -p /data/meta && chown -R 65534:65534 /data
 
 VOLUME ["/data/files", "/data/meta"]
 
+RUN apk add curl
+HEALTHCHECK CMD curl --fail http://localhost:8080/ || exit 1
+
 USER nobody
 ENTRYPOINT ["/usr/local/bin/linx-server", "-bind=0.0.0.0:8080", "-filespath=/data/files/", "-metapath=/data/meta/"]
